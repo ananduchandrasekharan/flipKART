@@ -1,0 +1,104 @@
+ <!-- Product section-->
+ <section class="py-5" style="width: auto;">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="row gx-4 gx-lg-5 align-items-center">
+     <div class="button">   <button (click)="addToWishlist()" id="button22"   class="btn btn-outline-dark flex-shrink-0 " type="button"  style=" z-index: 3; width: 40px;height: 40px;background-color: #ffffff;color: #6c6c6c90; margin-left: 400px;border: none;border-radius: 150px; box-shadow: -2px -2px 6px rgb(255, 255, 255),
+        -2px -2px 4px rgba(245, 237, 237, 0.4),
+        2px 2px 2px rgba(255, 255, 255, .05),
+        2px 2px 4px rgba(0, 0, 0, .1);
+">
+             <!-- [style.backgroundColor]="isLiked ? 'white' : 'black'"        -->
+            <i class="fa-solid fa-heart"  [style.color]="isLiked ? '#ff2424' : '#6c6c6c90;'" ></i>
+                
+                    </button></div>         
+            <div class="col-md-6" id="image-zoom" style="height: 600px;width: 500px;"><img id="mainimage" class="card-img-top mb-5 mb-md-0" [src]="product.image" src="https://dummyimage.com/600x700/dee2e6/6c757d.jpg" alt="" (mousemove)="zoomImage($event)" (mouseleave)="resetZoom($event)" />
+               
+                
+                
+                <!-- <div class="popup-message" [ngClass]="{ 'show': showMessage }">
+                    {{ message }}
+                  </div> -->
+                  
+                <!-- var btnvar1 = document.getElementById('btnh1');
+
+                function Toggle1(){
+                         if (btnvar1.style.color =="red") {
+                             btnvar1.style.color = "grey"
+                         }
+                         else{
+                             btnvar1.style.color = "red"
+                         }
+                } -->
+            
+            </div>
+            <div class="col-md-6" style="width: 772px;">
+                <div class="small mb-1" style="font-family: arial,sans-serif">ID:{{product._id}}</div>
+                <h1 class="display-5 " style="font-family: arial,sans-serif;font-weight: 500;font-size: 25px;">{{product.title}}</h1>
+                <div class="fs-5 mb-5">
+<div class="rating" style="border: solid;    line-height: normal;
+display: inline-block;
+color: #fff;
+padding: 2px 4px 2px 6px;
+border-radius: 3px;
+font-weight: 700;
+font-size: 16px;
+vertical-align: middle;
+background-color: #388e3c;">
+    <span style="font-family: arial,sans-serif;">{{product.rating.rate}} <i class="fa-solid fa-star"  style="color: #ffffff;"></i></span>
+</div>
+<span class="_2_R_DZ"><span><span style="font-family: arial,sans-serif;color: #878787;font-weight: 514;">{{product.rating.count}} Ratings&nbsp;</span><span class="_13vcmD" style="color: #878787;">&amp;</span><span style="font-family: arial,sans-serif;color: #878787;">&nbsp;{{product.rating.count %6}} &nbsp;Reviews &nbsp;&nbsp; <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_62673a.png" style="height: 28px;" alt=""></span></span></span>
+                   
+              <div>
+                
+<span style="    font-weight: 600;
+font-size: medium;
+    text-align: left;
+    color: #388e3c;">Special price</span>
+                    <p style="    
+                    font-size: 32px;
+                    font-weight: 500;
+                    color: #212121;font-family: arial,sans-serif;"> &#8377;{{product.price *80}}  <span class="text-decoration-line-through" style="font-size: 20px; color: #21212173;font-family: arial,sans-serif;" >&#8377; {{product.price*80 +600}}</span>     <span style="color: #388e3c;font-size: 18px;font-weight: 600;font-family: arial,sans-serif;letter-spacing: -1px;"> &nbsp;{{((this.product.price *80)*100/((this.product.price)*80 +600)).toFixed(2)}}% off</span>    </p>
+                           </div> 
+
+
+                        <span class="_3j4Zjq row" style="font-size: 15px; "><img src="https://rukminim1.flixcart.com/www/36/36/promos/06/09/2016/c22c9fc4-0555-4460-8401-bf5c28d7ba29.png?q=90" style="height: 20px;width: auto;" class="_3HLfAg"><li class="_16eBzU col" style="list-style-type: none;"><span class="u8dYXW" ><strong style="font-family: Arial;">Bank Offer &nbsp;</strong></span><span  style="font-family: arial,sans-serif">Flat ₹1,250 Off on HDFC Bank Credit Card EMI Trxns on orders priced between ₹15,000 to ₹39,999</span><div class="Bv11UC _1qNw3R"><span class="fGhUR2" style="font-family: arial,sans-serif;color: #2874f0;">T&amp;C</span></div></li></span>
+                        <span class="_3j4Zjq row" style="font-size: 15px;"><img src="https://rukminim1.flixcart.com/www/36/36/promos/06/09/2016/c22c9fc4-0555-4460-8401-bf5c28d7ba29.png?q=90" style="height: 20px;width: auto;" class="_3HLfAg"><li class="_16eBzU col" style="list-style-type: none;font-family: arial,sans-serif"><span class="u8dYXW" style="font-family: arial,sans-serif"><strong style="font-family: Arial;">Bank Offer&nbsp;</strong></span><span style="font-family: arial,sans-serif">Flat ₹1,250 Off on HDFC Bank Credit Card EMI Trxns on orders priced between ₹15,000 to ₹39,999</span><div class="Bv11UC _1qNw3R"><span class="fGhUR2" style="font-family: arial,sans-serif;color: #2874f0;">T&amp;C</span></div></li></span>
+                        <span class="_3j4Zjq row" style="font-size: 15px;"><img src="https://rukminim1.flixcart.com/www/36/36/promos/06/09/2016/c22c9fc4-0555-4460-8401-bf5c28d7ba29.png?q=90" style="height: 20px;width: auto;" class="_3HLfAg"><li class="_16eBzU col" style="list-style-type: none;font-family: arial,sans-serif"><span class="u8dYXW" style="font-family: arial,sans-serif"><strong style="font-family: Arial;">Bank Offer&nbsp;</strong></span><span style="font-family: arial,sans-serif">Flat ₹1,250 Off on HDFC Bank Credit Card EMI Trxns on orders priced between ₹15,000 to ₹39,999</span><div class="Bv11UC _1qNw3R"><span class="fGhUR2" style="font-family: arial,sans-serif;color: #2874f0;">T&amp;C</span></div></li></span>
+
+
+
+
+
+
+
+                </div>
+                <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium at dolorem quidem modi. Nam sequi consequatur obcaecati excepturi alias magni, accusamus eius blanditiis delectus ipsam minima ea iste laborum vero?</p>
+                <div class="d-flex">
+                    <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" />
+           
+<!-- 
+                    <button (click)="addToWishlist()" id="button22"   [style.backgroundColor]="isLiked ? 'white' : 'black'" [style.color]="isLiked ? 'black' : 'white'" class="btn btn-outline-dark flex-shrink-0" type="button">
+                       
+                       wishh karo
+                    </button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="btn btn-outline-dark flex-shrink-0" type="button" (click)="addToCart(product)" style="backgroundColor: #ff9f00;color: aliceblue;font-family: Roboto,Arial,sans-serif;font-weight: 700;border: none;border-radius: 2px;padding: 20px;padding-left: 70px;padding-right: 70px;margin-left: 190px;">
+        <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
+      &nbsp;  ADD TO CART
+    </button>
+<button class="btn btn-outline-dark flex-shrink-0" type="button" style="backgroundColor: #fb641b;color: aliceblue;font-family: Roboto,Arial,sans-serif;font-weight: 700;border: none;border-radius: 2px;padding: 20px;padding-left: 70px;padding-right: 70px;margin-left: 10px;">
+<i class="fa-solid fa-bolt-lightning" style="color: #fafcff;"></i>
+&nbsp; BUY NOW
+    </button>
+</section>
+
+
+
+<!-- transform: scale3d(1, 1, 1); -->
+
+
+
+

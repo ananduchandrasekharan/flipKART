@@ -1,0 +1,65 @@
+/* #mainimage:hover{ */
+    /* transition-duration: 2s; */
+      /* transform: scaleX(-1); */
+/* } */
+
+
+
+/* *{
+ font-family:  Arial,sans-serif;
+} */
+
+
+ #button22 {
+  background-color: #ddd;
+  color: black;
+}
+
+#button22.liked {
+  background-color: red;
+  color: white;
+}
+
+
+
+
+
+
+
+
+#image-zoom {
+  overflow: hidden;
+  position: relative;
+}
+
+#mainimage {
+  transition: transform 0.3s;
+  
+
+}
+
+#mainimage.zoomed {
+  cursor: crosshair; 
+ 
+   transform: scale(1.4);
+}
+
+
+
+
+
+.popup-message {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #FFF;
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.popup-message.show {
+  opacity: 1;
+}

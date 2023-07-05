@@ -1,0 +1,115 @@
+
+
+
+
+
+<div class="page">
+    <div class="nav" style="height: 60px;">
+      <!-- <img src="WhatsApp Image 2023-03-26 at 12.57.53 PM.jpeg"> -->
+       
+    
+        <img  src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/fk-explorePlus-c5de64.png" style="width:110px; height:40px;margin-left: 100px;margin-right: -160px;">
+        <!-- <input type="text" placeholder="   search for products,brands or more"> -->
+        <div class="form-outline" style="display: flex;">
+            <input type="search" (keyup)="search($event)" id="form1" class="form-control" placeholder="Search for products, brands and more" style="width:380px;height:40px;margin-top: 7px;font-family: Roboto,Arial,sans-serif;font-weight: bolder; border-radius: 0px;box-shadow: 0 2px 4px 0 rgba(0,0,0,.23);width: 680px;margin-right: -90px;"/>
+            <button style="width:38px;margin-top: 7px;height: 40px;padding-right: 10px;border-radius: 3px;padding-left: 50px;"><i class="fa-solid fa-magnifying-glass" style="color: #2874F0;"></i></button>
+          </div>
+
+
+        
+          <div class="dropdown" style="margin-top: 7px;">
+            <a  class="btn  dropdown-toggle" href="#" role="button" id="dropdownMenuLink"data-mdb-toggle="dropdown"aria-expanded="false" style="color: white;">
+             Sayu
+            </a>
+          
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="color: #2874F0;width: 280px;padding-left: 40px;">
+              <li style="border-bottom: 1px solid rgba(0, 0, 0, 0.153);width:100%;padding-left:-60px;margin-left: -20px;"><a class="dropdown-item" href="oho" ><i class="fa-solid fa-user" style="color: #2874F0;"></i>my profile</a></li>
+              <li style="border-bottom: 1px solid rgba(0, 0, 0, 0.153);width:100%;padding-left:-60px;margin-left: -20px;"><a class="dropdown-item" href="#"><i class="fa-solid fa-bolt" style="color: #2874F0;"></i>supercoin zone</a></li>
+              <li style="border-bottom: 1px solid rgba(0, 0, 0, 0.153);width:100%;padding-left:-60px;margin-left: -20px;"><a class="dropdown-item" href="#"><i class="fa-sharp fa-solid fa-plus-large" style="color: #2874F0;"></i>flipkartzone</a></li>
+              <li style="border-bottom: 1px solid rgba(0, 0, 0, 0.153);width:100%;padding-left:-60px;margin-left: -20px;"><a class="dropdown-item" href="#"><i class="fa-solid fa-folder-arrow-up" style="color: #2874F0;"></i>orders</a></li>
+             
+              <li style="border-bottom: 1px solid rgba(0, 0, 0, 0.153);width:100%;padding-left:-60px;margin-left: -20px;"><a class="dropdown-item" routerLink="products/wishlist"><i class="fa-solid fa-heart"style="color: #2874F0;"></i>wishlist</a></li>
+              <li style="border-bottom: 1px solid rgba(0, 0, 0, 0.153);width:100%;padding-left:-60px;margin-left: -20px;"><a class="dropdown-item" href="#"><i class="fa-solid fa-ticket-simple"style="color: #2874F0;"></i>coupon</a></li>
+              <li style="border-bottom: 1px solid rgba(0, 0, 0, 0.153);width:100%;padding-left:-60px;margin-left: -20px;"><a class="dropdown-item" href="#"><i class="fa-regular fa-id-card-clip"style="color: #2874F0;"></i>giftcard</a></li>
+              <li style="border-bottom: 1px solid rgba(0, 0, 0, 0.153);width:100%;padding-left:-60px;margin-left: -20px;" ><a class="dropdown-item" href="#"><i class="fa-solid fa-bell"style="color: #2874F0;"></i>notification</a></li>
+              <li style="border-bottom: 1px solid rgba(0, 0, 0, 0.153);width:100%;padding-left:-60px;margin-left: -20px;"><a class="dropdown-item" href="#"><i class="fa-solid fa-power-off"style="color: #2874F0;"></i>logout</a></li>
+
+
+
+            </ul>
+          </div>    
+    
+        <!-- <div class="hide">
+         <table> <ul type="none">
+          <tr>  <li>New customer?    signup</li> </tr>
+        <tr><li>new?</li></tr>
+      <tr> <li>new?</li></tr>
+    <tr>  <li>new?</li></tr>
+          </ul></table>
+        </div> -->
+     
+        <a style="margin-top: 7px;">Become a Seller</a>
+        
+        <div class="dropdown">
+            <a style="margin-top: 7px;" class="btn  dropdown-toggle" href="#" role="button" id="dropdownMenuLink"data-mdb-toggle="dropdown"aria-expanded="false" style="color: white;">
+              more
+            </a>
+          
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <li><a class="dropdown-item" href="oho">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
+
+
+<!-- 
+<nav class="dropdownmenu">
+  <ul>
+    <li>home</li>
+    <li>about</li>
+    <li>gallery
+      <ul id="submenu"><li>svg</li><li>svg</li><li>svg</li></ul>
+    </li>
+  </ul>
+  
+</nav>
+ -->
+
+        <button  type="submit" routerLink="products/cart" style="background-color: #2874F0; color: white;"> <a>
+          <div class="count" style="position: absolute;"> 
+            
+      </div>
+          <i class="fa-solid fa-cart-shopping"></i><span style="font-size: 15px;background-color: #ff6161; position: absolute; transform: translateX(-50%); z-index: 1;border-radius: 50px;width:22px;height: 20px;bottom: 35px;border: solid;border-color: aliceblue;border-width: 1px;padding-bottom: 1px;">{{itemcounter}}</span>Cart </a></button>
+      
+      </div>
+    
+    
+   
+    
+    
+    
+    
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
